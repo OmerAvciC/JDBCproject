@@ -13,6 +13,26 @@ public class Test01 extends JDBCParent {
     public void test1() throws SQLException {
 
         ResultSet rs = statement.executeQuery("select * from language");
+
+        ResultSetMetaData rsmd = rs.getMetaData();
+
+        int columnCount = rsmd.getColumnCount();
+        System.out.println("columnCount = " + columnCount);
+
+        for (int i = 1; i <= columnCount; i++) {
+            String columnName = rsmd.getColumnName(i);
+            String columnType = rsmd.getColumnTypeName(i);
+
+            System.out.print("columnName= " + columnName);
+            System.out.println(",  columnType= " + columnType);
+        }
+    }
+
+    @Test
+    public void test2() throws SQLException {
+
+        ResultSet rs = statement.executeQuery("select * from language");
+
         ResultSetMetaData rsmd = rs.getMetaData();
 
         int columnCount = rsmd.getColumnCount();
