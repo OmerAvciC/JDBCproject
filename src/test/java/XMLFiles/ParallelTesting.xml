@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit 1"  parallel="tests" thread-count="2">
+
+    <test name="Test JDBC">
+        <classes>
+            <class name="JDBC.Tests.Test01"></class>
+        </classes>
+    </test>
+</suite>
