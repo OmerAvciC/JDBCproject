@@ -1,4 +1,4 @@
-package JDBC.Tests;
+package Runners;
 
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
